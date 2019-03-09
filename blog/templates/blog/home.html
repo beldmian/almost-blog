@@ -1,0 +1,14 @@
+{% extends 'blog/main.html' %}
+{% block body %}
+    {% for post in news %}
+        <div class="card text-center mb-4">
+        <img class="card-img-top" src="{{post.image}}" alt="Card image cap" style="height=200px;">
+        <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">{{post.text}}</p>
+            <span class="card-text">Date: {{post.date}}, Author: {{post.author}}</span>
+        </div>
+        </div>
+    {% endfor %}
+{% endblock body %}
+
